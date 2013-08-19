@@ -1,8 +1,5 @@
 p There are {{events.length}} events
-div(ng-repeat="event in events | orderBy:'startDate'")
-    h3 {{event.startDate | date:'dd MMMM yyyy'}} - {{event.location}}
-    a(href='readEvent/{{event.id}}') More
-    | -
-    a(href='editEvent/{{event.id}}') Edit
-    | -
-    a(href='deleteEvent/{{event.id}}') Delete
+ul
+    li(ng-repeat="event in events | orderBy:'startDate'")
+        h3 {{event.startDate | date:'dd MMMM yyyy'}} - {{event.location}}
+        a(href='editEvent/{{event.id}}') More

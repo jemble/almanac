@@ -1,11 +1,12 @@
 'use strict';
 
 /* Controllers */
-function IndexCtrl($scope, $http) {
+function IndexCtrl($scope, $http, $location) {
     $http.get('/api/events').
         success(function(data, status, headers, config) {
             $scope.events = data.events;
         });
+
 }
 
 function AddEventCtrl($scope, $http, $location) {
@@ -35,8 +36,13 @@ function EditEventCtrl($scope, $http, $location, $routeParams) {
     $scope.editEvent = function () {
         $http.put('/api/event/' + $routeParams.id, $scope.form).
             success(function(data) {
-                $location.url('/readEvent/' + $routeParams.id);
+                $location.url('/editEvent/' + $routeParams.id);
             });
+    };
+
+    $scope.goToDelete = function () {
+
+        $location.url('/deleteEvent/'+ $routeParams.id);
     };
 }
 

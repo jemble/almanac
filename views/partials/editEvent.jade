@@ -7,7 +7,7 @@ label(for='type') Type
 input(ng-model='form.type', name='type')
 label(for='url') Link
 input(ng-model='form.url', name='url')
-a(target='_blank', href='{{form.url}}') go
+a(target='_blank', href='http://{{form.url}}') go
 label(for='confirmation')
 input(ng-model='form.confirmation', name='confirmation')
 label(for='info') Info
@@ -18,3 +18,4 @@ label(for='bandOrganiser') Band Organiser
 input(ng-model='form.bandOrganiser',name='bandOrganiser')
 p
     button(ng-click='editEvent()') Save
+    button(ng-click='goToDelete()') Delete
