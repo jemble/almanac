@@ -1,0 +1,20 @@
+h2 Event
+label(for='location') Location
+input(ng-model='form.location', name=location)
+label(for='startDate') Start Date
+input(ng-model='form.startDate', name=startDate)
+label(for='type') Type
+input(ng-model='form.type', name='type')
+label(for='url') Link
+input(ng-model='form.url', name='url')
+a(target='_blank', href='{{form.url}}') go
+label(for='confirmation')
+input(ng-model='form.confirmation', name='confirmation')
+label(for='info') Info
+textarea(ng-model='form.info',name='info')
+label(for='contact') Contact Name
+input(ng-model='form.contact',name='contact')
+label(for='bandOrganiser') Band Organiser
+input(ng-model='form.bandOrganiser',name='bandOrganiser')
+p
+    button(ng-click='editEvent()') Save

@@ -1,0 +1,22 @@
+extends layout
+
+block body
+    div
+        h2  Band Events
+        ul
+            li
+                a(href='/') Home
+            li
+                a(href='/addEvent') Add Event
+        div(ng-view)
+
+    script(src='js/lib/angular/angular.js')
+    script(src='js/app.js')
+    script(src='js/services.js')
+    script(src='js/controllers.js')
+    script(src='js/filters.js')
+    script(src='js/directives.js')
+
+
+
+

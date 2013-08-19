@@ -1,0 +1,7 @@
+h2 Write a new event
+label(for='location') Location
+input(ng-model='form.location', name=location)
+p Body:
+textarea(ng-model='form.startDate', cols='50', rows='15')
+p
+    button(ng-click='submitEvent()') Submit Event
